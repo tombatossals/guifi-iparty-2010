@@ -1,0 +1,1294 @@
+<!doctype html>
+<!-- 
+  Copyright 2010 Google Inc.
+ 
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+ 
+     http://www.apache.org/licenses/LICENSE-2.0
+ 
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+ 
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+                 Brad Neuberg
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/jquery.countdown.css" />
+<title>Introducción a guifi.net: Materiales, combinaciones y
+	precios para diferentes tipos de nodos</title>
+</head>
+
+<body>
+	<div class="presentation">
+		<div class="slides">
+
+			<div class="slide">
+				<section class="center intro">
+					<hgroup>
+						<h1>
+							guifi.<span class="red">net</span>
+						</h1>
+						<h2>Materiales, combinaciones y precios para diferentes tipos
+							de nodos</h2>
+					</hgroup>
+					<p style="font-size: 16px; line-height: 25px;">Una introducción
+						al montaje casero de un nodo o un supernodo en guifi.net</p>
+					<p>
+						Apreta la tecla <span class="key">&rarr;</span> para avanzar.
+					</p>
+					<img
+						style="position: absolute; right: .5em; bottom: .5em; opacity: .5;"
+						src="images/uji140.png" />
+				</section>
+			</div>
+
+			<div class="slide">
+				<section class="center intro">
+					<p>Esta presentación es un website HTML5.</p>
+					<p>
+						Apreta la tecla <span class="key">&rarr;</span> para avanzar.
+					</p>
+					<p>
+						Ampliar/reducir: <span class="key">Ctrl </span> + <span
+							class="key">+/-</span>
+					</p>
+					<p style="font-size: 25px">
+						Para verla desde Internet: <a href="http://enruta.me">http://www.enruta.me</a>
+					</p>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>Navegadores que soportan HTML5</header>
+				<section>
+					<p>
+						Avanza o retrocede por los navegadores compatibles con las teclas:
+						<span class="key">&uarr;</span> y <span class="key">&darr;</span>
+					<div class="gallery">
+						<p></p>
+						<img alt="Google Chrome" src="images/chrome.png" /> <img
+							alt="Mozilla Firefox" src="images/firefox.png" /> <img
+							alt="Apple Safari" src="images/safari.png" />
+					</div>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="internet">Internet</span>
+					<h1>ISP's</h1>
+				</header>
+				<section>
+					<example style="overflow: hidden;">
+					<p>
+						<a title="Wikipedia: Proveedor de servicios de Internet"
+							style="display: inline;"
+							href="http://es.wikipedia.org/wiki/Proveedor_de_servicios_de_Internet"><img
+							alt="Wikipedia logo"
+							style="float: left; border: 0px; border-right: 2px dashed #CCC; margin-right: .5em; padding-right: .5em;"
+							src="images/wikipedia.png" /></a>Un proveedor de servicios de
+						Internet (o ISP, por la sigla en inglés de Internet Service
+						Provider) es una empresa que brinda conexión a Internet a sus
+						clientes. Un ISP conecta a sus usuarios a Internet a través de
+						diferentes tecnologías como DSL, Cablemódem, GSM, Dial-up, Wifi,
+						entre otros.
+					</p>
+					</example>
+					<p>La teoría nos dice que un ISP:</p>
+					<ul class="bullets">
+						<style>
+li {
+	padding: .1em;
+	font-size: .7em;
+}
+</style>
+						<li>Nos facilita el alta/baja de la conexión a Internet.</li>
+						<li>Nos ofrecen una amplia gama de opciones de conectividad.</li>
+						<li>Nos evita la complejidad técnica del montaje y gestión de
+							la conexión.</li>
+						<li>Nos ofrece un Servicio Técnico para resolver problemas.</li>
+						<li>Nos cobra un precio justo por todo esto.</li>
+					</ul>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="internet">Internet</span>
+					<h1>ISP's</h1>
+				</header>
+				<section>
+					<p>La realidad, basada en la experiencia personal, nos dice que
+						un ISP:</p>
+					<ul class="bullets">
+						<style>
+li {
+	padding: .3em 0;
+	font-size: .7em;
+}
+</style>
+						<li>Nos facilita el alta, pero nos pone trabas para la baja o
+							cambio de operadora.</li>
+						<li>No reinvierte en infraestructuras, por lo que estamos
+							estancados en tecnología obsoleta (ADSL).</li>
+						<li>Las zonas poco rentables son abandonadas sin servicio.</li>
+						<li>Ofertas engañosas: "Hasta 20 megas", o limitaciones en el
+							trafico.</li>
+						<li>El servicio técnico es de pago (902), y poco eficiente.</li>
+						<li>Los precios son abusivos para algo que debería ser un
+							derecho y no un lujo.</li>
+					</ul>
+					<p>Nadie dice que los ISP's lo hagan todo mal, pero sí decimos
+						que deben mejorar mucho.</p>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="html">guifi.net</span>
+					<h1>Otra manera de acceder a la red</h1>
+				</header>
+				<section>
+					<example style="overflow: hidden;">
+					<p>
+						<a title="Wikipedia: Guifi.net" style="display: inline;"
+							href="http://es.wikipedia.org/wiki/Guifi.net"><img
+							alt="Wikipedia logo"
+							style="float: left; border: 0px; border-right: 2px dashed #CCC; margin-right: .5em; padding-right: .5em;"
+							src="images/wikipedia.png" /></a>Guifi.net es una red informática de
+						telecomunicaciones libre, abierta y neutral, mayoritariamente
+						inalámbrica, con más de 13.000 nodos, de los cuales más de 9.500
+						están operativos. (...) Los nodos de la red son de particulares,
+						empresas y administraciones que libremente se conectan a ésta para
+						poder acceder a una auténtica red abierta de telecomunicaciones.
+					</p>
+					</example>
+					<p>Guifi.net es un modelo abierto de acceso a la red con las
+						siguientes características:</p>
+					<ul class="bullets">
+						<style>
+li {
+	padding: .3em 0;
+	font-size: .7em;
+}
+</style>
+						<li>Basada mayoritariamente en tecnología inalámbrica.</li>
+						<li>Guifi.net NO da acceso a Internet, aunque puedes acceder
+							a Internet desde Guifi.net con una pasarela adecuada (un proxy,
+							un túnel VPN, etc.).</li>
+						<li>Guifi.net es totalmente libre.</li>
+						<li>La cobertura y crecimiento de la red la deciden los nodos
+							integrantes.</li>
+					</ul>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="html">guifi.net</span>
+					<h1>Evolución en Castellón</h1>
+				</header>
+				<section>
+					<p>Mapa actual de la evolución de los nodos y supernodos en la
+						provincia de Castellón:</p>
+					<div class="map">
+						<div id="map1" style="width: 820px; height: 450px;"></div>
+					</div>
+					<p>
+						Actualmente en Castellón hay <strong>271</strong> nodos activos, <strong>175</strong>
+						proyectados y <strong>24</strong> en pruebas.
+					</p>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="html">guifi.net</span>
+					<h1>Perfiles de usuarios</h1>
+				</header>
+				<section>
+					<p style="font-size: .6em; text-decoration: underline;">¿En qué
+						grupo de usuarios te encuentras?</p>
+					<p>Usuarios no conectados a guifi.net:</p>
+					<ul class="bullets" style="margin: 0;">
+						<li>Usuario que no tiene Internet.</li>
+						<li>Usuario conectado a Internet y contento con su actual
+							ISP.</li>
+						<li>Usuario descontento con su ISP, pero no conoce guifi.net.</li>
+						<li>Usuario que ya conoce guifi.net.</li>
+					</ul>
+					<p>Usuarios conectados a guifi.net:</p>
+					<ul class="bullets" style="margin: 0;">
+						<li>Usuario conectado a guifi.net, como cliente.</li>
+						<li>Usuario conectado a guifi.net y con un supernodo montado.</li>
+					</ul>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="html">guifi.net</span>
+					<h1>¿Qué necesito para conectar?</h1>
+				</header>
+				<section>
+					<ul class="bullets">
+						<li>Visibilidad con un supernodo.</li>
+						<li>Un mástil (o similar) donde ubicar la antena.</li>
+						<li>Una antena-router moderna que nos facilite la conexión:
+							<ul>
+								<li>Caja estanca.</li>
+								<li>Conexión POE.</li>
+								<li>Capaz de enrutar.</li>
+								<li>Bajo consumo.</li>
+								<li>Resistente a las bajas/altas temperaturas.</li>
+								<li>Linux Inside (a poder ser).</li>
+								<li>Si vamos a utilizarla como cliente, una antena
+									direccional.</li>
+								<li>Si vamos a hacer de punto de acceso, una antena
+									sectorial u omnidireccional.</li>
+							</ul>
+						</li>
+						<li>Dar nuestro nodo y trasto de alta en <a
+							href="http://guifi.net">http://guifi.net</a>.
+						</li>
+						<li>Unos conocimientos (mínimos) sobre redes.</li>
+						<li>Dedicación y un poco de paciencia, o alguien que nos
+							ayude.</li>
+					</ul>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="html">guifi.net</span>
+					<h1>Supernodo</h1>
+				</header>
+				<section>
+					<p>El supernodo se establece cuando, además de recibir señal
+						como cliente, propagamos la señal hacia otras ubicaciones
+						ampliando así la cobertura y alcance de la red libre.</p>
+					<ul class="bullets" style="margin: .5em 0;">
+						<li>Montaje un poco más complejo y caro que en modo cliente.</li>
+						<li>Pero también mucho más gratificante.</li>
+						<li>Debemos enrutar dinámicamente, ya que somos responsable
+							de un trocito (o un gran trozo) de la red.</li>
+					</ul>
+					<p style="text-align: center; margin: 0;">
+						<img style="border: 8px solid white;" src="images/benicassim.jpg" />
+					</p>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="html">guifi.net</span>
+					<h1>Tecnologías de conexión</h1>
+				</header>
+				<section>
+					<p>Guifi.net no nos impone una tecnología de conexión concreta.
+						En Castellón estamos creciendo con tecnología inalámbrica (bajo
+						coste y fácil instauración).</p>
+					<ul class="bullets">
+						<li>Tenemos 2 bandas no licenciadas disponibles: 2,4Ghz y
+							5Ghz.</li>
+						<li>En Castellón nos hemos decantado por crecer con 5Ghz.</li>
+						<li>Razón: baja saturación del espectro radioeléctrico.</li>
+						<li>La comunicación entre nodos no utiliza encriptación.</li>
+						<li>El enrutamiento dinámico de las diferentes subredes lo
+							estamos consiguiendo actualmente con OSPF.</li>
+					</ul>
+				</section>
+			</div>
+
+			<div class="slide">
+				<section class="center intro">
+					<hgroup>
+						<h1>Hardware inalámbrico:</h1>
+						<h2>Teoría y conceptos básicos</h2>
+					</hgroup>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">teoría</span>
+					<h1>Conceptos básicos wifi</h1>
+				</header>
+				<section>
+					<p>Algunas definiciones básicas de los enlaces inalámbricos:</p>
+					<ul class="bullets">
+						<li>Conexión en Modo cliente.</li>
+						<li>Punto de acceso.</li>
+						<li><a href="http://es.wikipedia.org/wiki/SSID">Service
+								Set Identifier (SSID)</a>.</li>
+						<li><a href="http://es.wikipedia.org/wiki/WDS">Wireless
+								Distribution System (WDS)</a>.</li>
+					</ul>
+					<p style="text-align: center;">
+						<a href="http://es.wikipedia.org/wiki/Wi-Fi"><img
+							style="border: 6px solid #999;" src="images/wifi.jpg" /></a> <a
+							href="http://es.wikipedia.org"><img
+							style="border: 6px solid #999;" src="images/wikibg.png" /></a>
+					</p>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">teoría</span>
+					<h1>Conceptos básicos wifi</h1>
+				</header>
+				<section>
+					<p>El standard que define el acceso al medio inalámbrico (capa
+						física y enlace de datos) ha evolucionado mucho:</p>
+					<ul class="bullets">
+						<li><strong>802.11b/g</strong>: Define el acceso al medio en
+							los 2,4Ghz (11Mbits/54Mbits teóricos).</li>
+						<li><strong>802.11a</strong>: Define el acceso al medio en
+							los 5Ghz (54Mbits teóricos).</li>
+						<li><strong>802.11n</strong>: Standard de reciente
+							ratificación. Velocidades de 600Mbps (reales de 100Mbits).</li>
+					</ul>
+					<p>Además se definen diferentes tipos de encriptaciones para la
+						señal transmitida, algunas más seguras que otras:</p>
+					<ul class="bullets">
+						<li>WEP, WPA, WPA-PSK, WPA-TKIP, WPA Empresarial, WPA2, etc.</li>
+					</ul>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">teoría</span>
+					<h1>Conceptos básicos de antenas</h1>
+				</header>
+				<section>
+					<p>Una antena es un dispositivo emisor/receptor de ondas
+						radioelectricas.</p>
+					<ul class="bullets" style="margin: 0; padding: 0">
+						<li>Polaridad. Orientación de las ondas electromagnéticas.</li>
+						<li>Ganancia de la antena (dbi's). Ganancia directiva.</li>
+						<li>Ruido. Toda señal de radio lleva acoplado un ruido.</li>
+						<li>Potencia transmitida (dbm's).</li>
+					</ul>
+					<p style="float: left;">
+						Para las fotos: <span class="key">&uarr;</span> y <span
+							class="key">&darr;</span>
+					</p>
+					<div class="mini gallery" style="background: white; float: right;">
+						<p></p>
+						<img alt="Polaridad horizontal"
+							src="images/antennas/hpolarity.jpg" /> <img
+							alt="Polaridad vertical" src="images/antennas/vpolarity.jpg" />
+						<img alt="Polaridad elíptica" src="images/antennas/epolarity.jpg" />
+						<img alt="Antena isotrópica" src="images/antennas/isotropic.jpg" />
+						<img alt="Patrón de radiación de una antena direccional"
+							src="images/antennas/gain.jpg" />
+					</div>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">hardware</span>
+					<h1>Conceptos básicos de antenas</h1>
+				</header>
+				<section>
+					<p>
+						Tipos de antenas. Avanza o retrocede por las fotos con las teclas:
+						<span class="key">&uarr;</span> y <span class="key">&darr;</span>
+					</p>
+					<div class="gallery" style="background: white;">
+						<p></p>
+						<img alt="Representación de la apertura de los tipos de antenas"
+							src="images/generic/aperturas.jpg" /> <img
+							alt="Antena planar, direccional (de 60 a 300 euros)"
+							src="images/generic/planar.jpg" /> <img
+							alt="Antena sectorial (de 60 a 200 euros)"
+							src="images/generic/sectorial.jpg" /> <img
+							alt="Antena omnidireccional (de 60 a 200 euros)"
+							src="images/generic/omnidireccional.jpg" />
+					</div>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">hardware</span>
+					<h1>Conceptos básicos de cable</h1>
+				</header>
+				<section>
+					<p>
+						Conexión por cable. Avanza o retrocede por las fotos con las
+						teclas: <span class="key">&uarr;</span> y <span class="key">&darr;</span>
+					</p>
+					<div class="gallery" style="background: white;">
+						<p></p>
+						<img alt="Cable ethernet, un clásico"
+							src="images/generic/ethernet.jpg" /> <img
+							alt="Bobina de cable UTP cat5 (300m. ~ 130 euros)"
+							src="images/generic/bobina.jpg" /> <img
+							alt="Conector RJ-45, pack de 20 unos 5-10 euros"
+							src="images/generic/rj45.jpg" /> <img
+							alt="Crimpadora para unir los RJ45 al cable UTP, 15 euros"
+							src="images/generic/crimpadora.jpg" /> <img
+							alt="Tubo corrugado, 20m. 8 euros."
+							src="images/generic/corrugado.jpg" /> <img
+							alt="Guía de cables, 3 euros" src="images/generic/guia.jpg" /> <img
+							alt="Inyector POE 15v., unos 8 euros"
+							src="images/generic/poe.jpg" /> <img
+							alt="Ejemplo de conexión de antena a mikrotik"
+							src="images/generic/all.jpg" /> <img
+							alt="Conector pigtail (unos 6 euros)."
+							src="images/generic/pigtail.jpg" /> <img
+							alt="Cable coaxial de baja pérdida (3 metros unos 20 euros)."
+							src="images/generic/coaxial.jpg" /> <img
+							alt="Diferentes conectores de antena a placa"
+							src="images/generic/conectores.jpg" />
+					</div>
+				</section>
+			</div>
+
+			<div class="slide">
+				<section class="center intro">
+					<hgroup>
+						<h1>Montaje tipo 1:</h1>
+						<h2>Todo en uno, productos Ubiquiti</h2>
+						<p>Lo más sencillo, sin complicarse la vida.</p>
+						<p class="jclock"></p>
+					</hgroup>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">Ubiquiti</span>
+					<h1>Ubiquiti Networks</h1>
+				</header>
+				<section>
+					<ul style="margin: .5em 0;" class="bullets">
+						<li>Empresa dedicada a la creación de dispositivos wireless.</li>
+						<li>No han inventado la rueda, pero han sabido entender el
+							momento tecnológico y las necesidades de la gente.</li>
+						<li>Sistema operativo: AirOS (webgui sobre Linux, libre ).</li>
+						<li>Multitud de productos, se han diversificado mucho.</li>
+						<li>Precio muy competitivo.</li>
+						<li>A excepción del <a
+							href="http://www.ubnt.com/routerstation">Routerstation</a>, todos
+							los productos que hemos probado han resultado de altísima
+							calidad.
+						</li>
+					</ul>
+					<img style="float: right; border: 8px solid #999;"
+						src="images/ubnt/logo.jpg" />
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">Ubiquiti</span>
+					<h1>Nanostation 5</h1>
+				</header>
+				<section>
+					<p>
+						Avanza o retrocede por las fotos con las teclas: <span class="key">&uarr;</span>
+						y <span class="key">&darr;</span>
+					<div class="gallery" style="background: white;">
+						<p></p>
+						<img alt="Nanostation 5Ghz: modelo clásico"
+							src="images/ubnt/n5/01.jpg"> <img
+							alt="Nanostation 5Ghz: Contenido de la caja"
+							src="images/ubnt/n5/02.jpg"> <img
+							alt="Leds indicadores de encendido, actividad LAN y calidad de la señal Wifi"
+							src="images/ubnt/n5/03.jpg"> <img
+							alt="RJ45 y botón de reset, ubicados dentro del compartimento estanco"
+							src="images/ubnt/n5/04.jpg"> <img
+							alt="Conectando todo: 2 cables con el adaptador POE para alimentar la antena"
+							src="images/ubnt/n5/05.jpg"> <img
+							alt="Lo más fácil es ubicarla, en cualquier mástil cabe"
+							src="images/ubnt/n5/06.jpg"> <img
+							alt="Esta foto es de la Nano que da conexión a mi casa"
+							src="images/ubnt/n5/07.jpg"> <img
+							alt="Parece que da juego esto de las Nanostation..."
+							src="images/ubnt/n5/08.jpg">
+					</div>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">Ubiquiti</span>
+					<h1>Nanostation 5</h1>
+				</header>
+				<section>
+					<p>Ventajas de la Nanostation como producto "Todo en uno":</p>
+					<ul class="bullets">
+						<li>Antena, router, caja estanca y alimentación por POE.</li>
+						<li>Procesador y RAM: más que suficiente.</li>
+						<li>Sistema operativo: AirOS 3.x (webgui sobre Linux, libre
+							).</li>
+						<li>Capaz de funcionar en cualquier clima: de -20C a 70C.</li>
+						<li>Antena multi-polarizada de 14dbi y 55 grados de apertura</li>
+						<li>Posibilidad de conectarle una antena externa.</li>
+						<li>Bajo comsumo (5 watios).</li>
+						<li>Precio: de 72 a 85 euros.</li>
+						<li><a href="http://www.ubnt.com/downloads/ns5_datasheet.pdf">Datasheet</a>
+							con el detalle de las características de la antena.</li>
+					</ul>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">Ubiquiti</span>
+					<h1>Nanostation 5</h1>
+				</header>
+				<section>
+					<p>Una video-review de la Nanostation 5Ghz.</p>
+					<div id="video1">Aquí va un video, necesito el plugin de
+						Flash.</div>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">Ubiquiti</span>
+					<h1>La evolución de la Nano 5</h1>
+				</header>
+				<section>
+					<p>
+						Avanza o retrocede por las fotos con las teclas: <span class="key">&uarr;</span>
+						y <span class="key">&darr;</span>
+					<div class="gallery" style="background: white;">
+						<p></p>
+						<img alt="Nanostation Loco 5, menor tamaño, menor precio"
+							src="images/ubnt/n5other/nanoloco5.jpg"> <img
+							alt="Bullet: pequeña y con antena externa"
+							src="images/ubnt/n5other/bullet.jpg"> <img
+							alt="Powerstation: planar todo en uno"
+							src="images/ubnt/n5other/powerstation.jpg"> <img
+							alt="Nanostation 5M: Utilización de la tecnología 802.11n"
+							src="images/ubnt/n5other/nano5m.jpg"> <img
+							alt="Nanostation Loco 5M: Tecnología 802.11n, más compacta y barata"
+							src="images/ubnt/n5other/nanoloco5m.jpg"> <img
+							alt="Nanobridge 5M: Tecnología 802.11n, muy direccional"
+							src="images/ubnt/n5other/nanobridge.jpg"> <img
+							alt="Rocket Dish: Tecnología 802.11n, ultra direccional"
+							src="images/ubnt/n5other/rocketdish.jpg"> <img
+							alt="En los 2,4Ghz: Picostation"
+							src="images/ubnt/n5other/picostation.jpg">
+					</div>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">Ubiquiti</span>
+					<h1>Nanobridge M5</h1>
+				</header>
+				<section>
+					<p>
+						Avanza o retrocede por las fotos con las teclas: <span class="key">&uarr;</span>
+						y <span class="key">&darr;</span>
+					<div class="gallery" style="background: white;">
+						<p></p>
+						<img alt="Nanobridge M5" src="images/ubnt/nanobridge/01.jpg">
+						<img alt="Nanobridge M5" src="images/ubnt/nanobridge/06.jpg">
+						<img alt="Nanobridge M5" src="images/ubnt/nanobridge/02.jpg">
+						<img alt="Nanobridge M5" src="images/ubnt/nanobridge/03.jpg">
+						<img alt="Nanobridge M5" src="images/ubnt/nanobridge/05.jpg">
+					</div>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">Ubiquiti</span>
+					<h1>Nanobridge M5</h1>
+				</header>
+				<section>
+					<p>Además de todas las características que posee una
+						Nanostation 5, la Nanobridge nos añade las siguientes
+						características:</p>
+					<ul class="bullets">
+						<li>Antena, router, caja estanca y alimentación por POE 24V.</li>
+						<li>Procesador y RAM: dobla a la N5.</li>
+						<li>Sistema operativo: AirOS 5.x (webgui sobre Linux, libre
+							).</li>
+						<li>Capaz de funcionar en cualquier clima: de -30C a 75C.</li>
+						<li>Antena multi-polarizada de 22dbi y unos 20 grados de
+							apertura.</li>
+						<li>Posibilidad de conectarle una antena externa.</li>
+						<li>Bajo comsumo (5.5 watios).</li>
+						<li>Precio: de 72 a 85 euros.</li>
+						<li><a href="http://www.ubnt.com/downloads/nb5_datasheet.pdf">Datasheet</a>
+							con el detalle de las características de la antena.</li>
+					</ul>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">Ubiquiti</span>
+					<h1>Nanobridge M5</h1>
+				</header>
+				<section style="text-align: center;">
+					<p>Un video de una Nanobridge montada en un mástil.</p>
+					<div id="video2">Aquí va un video, necesito el plugin de
+						Flash.</div>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">Ubiquiti</span>
+					<h1>Rocket M5 y Rocket Dish</h1>
+				</header>
+				<section>
+					<p>
+						Avanza o retrocede por las fotos con las teclas: <span class="key">&uarr;</span>
+						y <span class="key">&darr;</span>
+					</p>
+					<div class="gallery" style="background: white;">
+						<p></p>
+						<img alt="Nanobridge M5" src="images/ubnt/rdish/01.jpg"> <img
+							alt="Nanobridge M5" src="images/ubnt/rdish/02.jpg"> <img
+							alt="Nanobridge M5" src="images/ubnt/rdish/03.jpg"> <img
+							alt="Nanobridge M5" src="images/ubnt/rdish/04.jpg"> <img
+							alt="Nanobridge M5" src="images/ubnt/rdish/05.jpg">
+					</div>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">Ubiquiti</span>
+					<h1>Rocket M5 y Rocket Dish</h1>
+				</header>
+				<section>
+					<p>El conjunto Rocket tiene las mismas características que una
+						Nanobridge añadiendo:</p>
+					<ul class="bullets">
+						<li>Dispositivo Rocket M5 estanco alimentado por POE y
+							conectado a la parabólica con 2 pigtails.</li>
+						<li>Resistencia a viento máxima: 120km/h.</li>
+						<li>Peso: de 10kg a 14kg.</li>
+						<li>Parabólica de 30dbi o de 34dbi.</li>
+						<li>Bajo comsumo.</li>
+						<li>Precio del conjunto: de 200 a 260 euros.</li>
+						<li><a
+							href="http://www.ubnt.com/downloads/RocketDish_Datasheet.pdf">Datasheet</a>
+							de las características de la parabólica.</li>
+						<li><a
+							href="http://www.ubnt.com/downloads/RocketDish_Datasheet.pdf">Datasheet</a>
+							de las características del Rocket M5.</li>
+					</ul>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">Ubiquiti</span>
+					<h1>Rocket Dish</h1>
+				</header>
+				<section style="text-align: center;">
+					<p>Un video del montaje de una Rocket Dish.</p>
+					<div id="video3">Aquí va un video, necesito el plugin de
+						Flash.</div>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">Ubiquiti</span>
+					<h1>Nuevos productos</h1>
+				</header>
+				<section>
+					<p>
+						Cada cierto tiempo Ubiquiti saca nuevos productos. Estos todavía
+						no hemos podido probarlos. Avanza o retrocede por las fotos con
+						las teclas: <span class="key">&uarr;</span> y <span class="key">&darr;</span>
+					</p>
+					<div class="gallery" style="background: white;">
+						<p></p>
+						<img alt="Airgrid M. Antena de 23dbi. Parecido al powerbridge."
+							src="images/ubnt/new/airgrid.jpg"> <img
+							alt="Powerbridge. Antena de 25dbi."
+							src="images/ubnt/new/powerbridge.jpg">
+					</div>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">Ubiquiti</span>
+					<h1>AirOS</h1>
+				</header>
+				<section>
+					<p style="margin: 0;">
+						Avanza o retrocede por las fotos con las teclas: <span class="key">&uarr;</span>
+						y <span class="key">&darr;</span>
+					<div class="gallery" style="background: white; margin: 0;">
+						<p></p>
+						<img alt="Pantalla principal: resumen de estado."
+							src="images/ubnt/airos/airos1.png"> <img
+							alt="Pantalla principal: resumen de estado."
+							src="images/ubnt/airos/airos2.png"> <img
+							alt="Pantalla de configuración del enlace inalámbrico."
+							src="images/ubnt/airos/airos3.png"> <img
+							alt="Pantalla de configuración de red."
+							src="images/ubnt/airos/airos4.png"> <img
+							alt="Pantalla de opciones de configuraciones inalámbricas avanzadas"
+							src="images/ubnt/airos/airos5.png"> <img
+							alt="Pantalla de activación de servicios en la antena: SNMP, SSH, Watchdog, etc."
+							src="images/ubnt/airos/airos6.png"> <img
+							alt="Pantalla de configuración de sistema: Actualización firmware, idioma, etc."
+							src="images/ubnt/airos/airos7.png">
+					</div>
+				</section>
+			</div>
+
+			<div class="slide">
+				<section class="center intro">
+					<hgroup>
+						<h1>Montaje tipo 2:</h1>
+						<h2>Bricolaje, productos Mikrotik</h2>
+						<p>Montajes más complejos, orientados a supernodos.</p>
+						<p class="jclock"></p>
+					</hgroup>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">Routerboard</span>
+					<h1>Mikrotik: La empresa</h1>
+				</header>
+				<section>
+					<ul class="bullets" style="margin-top: 0;">
+						<li>Productos de gran calidad.</li>
+						<li>Montajes inalámbricos a medida.</li>
+						<li>Antenas externas, no integradas.</li>
+						<li>Sistema operativo: RouterOS. Espectacular.</li>
+						<li>Basado en Linux, PERO problemas con la licencia. :(</li>
+						<li>En la web de guifi.net, el "unsolclic" nos generará la
+							config.</li>
+					</ul>
+					<img style="float: right; border: 8px solid #999;"
+						src="images/mikrotik/logo.jpg" />
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">Routerboard</span>
+					<h1>RB433</h1>
+				</header>
+				<section>
+					<p>
+						Avanza o retrocede por las fotos con las teclas: <span class="key">&uarr;</span>
+						y <span class="key">&darr;</span>
+					<div class="gallery" style="background: white;">
+						<p></p>
+						<img alt="Routerboard 433: entry level (unos 130 euros)"
+							src="images/mikrotik/rb433/rb433.jpg"> <img
+							alt="Caja estanca para exterior (de 40 a 60 euros)"
+							src="images/mikrotik/boxes/box433.jpg"> <img
+							alt="Fuente de alimentación (unos 10 euros)"
+							src="images/mikrotik/rb433/power.png"> <img
+							alt="Inyector POE" src="images/mikrotik/rb433/poe.png"> <img
+							alt="Tarjetas MINI-PCI de red inalámbrica R52N (unos 30 euros cada una)"
+							src="images/mikrotik/rb433/r52n.png"> <img
+							alt="Bobina de cable UTP cat5 (300m. ~ 130 euros)"
+							src="images/generic/bobina.jpg" /> <img
+							alt="Tubo corrugado, 20m. 8 euros."
+							src="images/generic/corrugado.jpg" /> <img
+							alt="Conectores pigtail (unos 6 euros cada uno)."
+							src="images/generic/pigtail.jpg" /> <img
+							alt="Cables coaxiales de baja pérdida (3 metros unos 20 euros)."
+							src="images/generic/coaxial.jpg" /> <img
+							alt="Antena planar, direccional (de 60 a 300 euros)"
+							src="images/generic/planar.jpg" /> <img
+							alt="Antena sectorial (de 60 a 200 euros)"
+							src="images/generic/sectorial.jpg" />
+					</div>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">Routerboard</span>
+					<h1>Características del RB433</h1>
+				</header>
+				<section>
+					<ul class="bullets" style="margin: 0;">
+						<li>Precio: unos 115 euros.</li>
+						<li>Procesador Atheros AR7320 300Mhz, 64MB de RAM.</li>
+						<li>64MB de memoria Flash.</li>
+						<li>3 puertos Ethernet 100Mbits.</li>
+						<li>3 slots MiniPCI para radios inalámbricas.</li>
+						<li>Sistema operativo RouterOS.</li>
+						<li>Consumo: 3W sin las radios, 25W máximo con las radios.</li>
+						<li><a href="http://www.routerboard.com/pdf/rb433.pdf">Datasheet</a>
+							del RB433.</li>
+					</ul>
+					<img style="float: right; border: 8px solid #999;"
+						src="images/mikrotik/logo.jpg" />
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">Routerboard</span>
+					<h1>Instalación de un Routerboard</h1>
+				</header>
+				<section style="text-align: center;">
+					<p>Un video cortito del montaje de un Routerboard en
+						exteriores.</p>
+					<div id="video4">Aquí va un video, necesito el plugin de
+						Flash.</div>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">Routerboard</span>
+					<h1>RB600</h1>
+				</header>
+				<section>
+					<p>
+						Avanza o retrocede por las fotos con las teclas: <span class="key">&uarr;</span>
+						y <span class="key">&darr;</span>
+					<div class="gallery" style="background: white;">
+						<p></p>
+						<img alt="Routerboard 600" src="images/mikrotik/rb600/rb600l.jpg">
+						<img alt="Caja estanca para exterior (de 40 a 60 euros)"
+							src="images/mikrotik/boxes/box433.jpg"> <img
+							alt="Fuente de alimentación (unos 10 euros)"
+							src="images/mikrotik/rb433/power.png"> <img
+							alt="Inyector POE" src="images/mikrotik/rb433/poe.png"> <img
+							alt="Tarjetas MINI-PCI de red inalámbrica R52N (unos 30 euros cada una)"
+							src="images/mikrotik/rb433/r52n.png"> <img
+							alt="Conectores pigtail (unos 6 euros cada uno)."
+							src="images/generic/pigtail.jpg" /> <img
+							alt="Cables coaxiales de baja pérdida (3 metros unos 20 euros)."
+							src="images/generic/coaxial.jpg" /> <img
+							alt="Antena planar, direccional (de 60 a 300 euros)"
+							src="images/generic/planar.jpg" /> <img
+							alt="Antena sectorial (de 60 a 200 euros)"
+							src="images/generic/sectorial.jpg" />
+					</div>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">Routerboard</span>
+					<h1>Características del RB600</h1>
+				</header>
+				<section>
+					<ul class="bullets" style="margin: 0;">
+						<li>Precio: 150 euros.</li>
+						<li>Procesador MPC834 266/400Mhz, 64MB de RAM.</li>
+						<li>64MB de memoria Flash, 2 slots Compact Flash.</li>
+						<li>3 puertos Ethernet Gigabit.</li>
+						<li>4 slots MiniPCI para radios inalámbricas.</li>
+						<li>Sistema operativo RouterOS.</li>
+						<li>Consumo: 9W sin las radios, 35W máximo con las radios.</li>
+						<li><a href="http://routerboard.com/pdf/rb600brochure.pdf">Datasheet</a>
+							del RB600.</li>
+					</ul>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">Routerboard</span>
+					<h1>Instalación de un Routerboard</h1>
+				</header>
+				<section style="text-align: center;">
+					<p>Otro video del montaje de un Routerboard RB600 en
+						exteriores.</p>
+					<div id="video5">Aquí va un video, necesito el plugin de
+						Flash.</div>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">Routerstation</span>
+					<h1>RouterOS 4.x</h1>
+				</header>
+				<section>
+					<p style="margin: 0;">
+						Avanza o retrocede por las fotos con las teclas: <span class="key">&uarr;</span>
+						y <span class="key">&darr;</span>
+					<div class="gallery" style="background: white; margin: 0;">
+						<p></p>
+						<img alt="Aplicación de gestión del router: Winbox"
+							src="images/mikrotik/routeros/routeros1.png"> <img
+							alt="Gestionamos cómodamente los interfaces"
+							src="images/mikrotik/routeros/routeros2.png"> <img
+							alt="Asignamos IP's a los interfaces"
+							src="images/mikrotik/routeros/routeros3.png"> <img
+							alt="Activamos el enrutamiento dinámico con OSPF"
+							src="images/mikrotik/routeros/routeros4.png">
+					</div>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">RouterOS</span>
+					<h1>Características</h1>
+				</header>
+				<section>
+					<ul class="bullets">
+						<li>Basado en Linux 2.6.x.</li>
+						<li>Administración con línea de comandos (SSH), Aplicación
+							Win32, o WebGUI.</li>
+						<li>Firewall completísimo. Source and Destination NAT.</li>
+						<li>Enrutamiento dinámico para IPv4 o IPv6 (OSPF, RIP, BGP).</li>
+						<li>Gestión de VPN's (IPSec, PPPoE, PPTP, OpenVPN, IPIP,
+							EoIP, etc.)</li>
+						<li>Soporte de todo tipo de tecnologías inalámbricas.</li>
+						<li>Fácil creación de HotSpots.</li>
+						<li>Gestión de Quality of Service.</li>
+						<li>Proxy. Posibilidad de proxy transparente.</li>
+						<li>Todo tipo de herramientas de gestión, incluido un packet
+							sniffer.</li>
+					</ul>
+				</section>
+			</div>
+
+			<div class="slide">
+				<section class="center intro">
+					<hgroup>
+						<h1>Montaje tipo 3 alternativo:</h1>
+						<h2>Mixto de Ubiquiti y Mikrotik</h2>
+						<p>Supernodos baratos, administración simplificada.</p>
+						<p class="jclock"></p>
+					</hgroup>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">Hardware</span>
+					<h1>Montajes de usuarios de a pie</h1>
+				</header>
+				<section>
+					<ul class="bullets">
+						<li>La pasta es un problema del ciudadano de a pie.</li>
+						<li>Tenemos que optimizar gastos en el montaje de los
+							equipos.</li>
+						<li>Ni muy simple muy caro...</li>
+						<li>Ni muy barato excesivamente complicado.</li>
+						<li>Montajes funcionando, no son prototipos.</li>
+					</ul>
+					<p>Lo que os cuento está funcionando en:</p>
+					<ul>
+						<li><a href="http://guifi.net/csbartolo">Supernodo
+								bartolo</a>.</li>
+						<li><a href="http://guifi.net/csbartolo">Supernodo
+								castalia</a>.</li>
+					</ul>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">Hardware</span>
+					<h1>RB750G</h1>
+				</header>
+				<section>
+					<p>
+						Avanza o retrocede por las fotos con las teclas: <span class="key">&uarr;</span>
+						y <span class="key">&darr;</span>
+					<div class="gallery" style="background: white;">
+						<p></p>
+						<img alt="1. Routerboard 750G, con RouterOS para enrutado."
+							src="images/mikrotik/rb750g/rb750g.jpg"> <img
+							alt="2. Nanobridge M5, antena cliente que enlaza con supernodo."
+							src="images/ubnt/nanobridge/02.jpg"> <img
+							alt="3. Nanostation 5M, en modo AP con 45 grados de apertura."
+							src="images/ubnt/n5other/nano5m.jpg"> <img
+							alt="Fuente de alimentación (unos 10 euros)"
+							src="images/mikrotik/rb433/power.png"> <img
+							alt="Inyector POE" src="images/mikrotik/rb433/poe.png">
+					</div>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">Hardware</span>
+					<h1>Boceto</h1>
+				</header>
+				<section>
+					<p>Boceto del montaje. Se ha evitado representar el POE para
+						simplificar.</p>
+					<div class="gallery" style="background: white;">
+						<p></p>
+						<img
+							alt="En las antenas no hay casi configuración. Todo recae en el RouterOS de Mikrotik."
+							src="images/mixto.png">
+					</div>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">Hardware</span>
+					<h1>Características</h1>
+				</header>
+				<section>
+					<p>Vamos a contar los detalles de este montaje mixto.</p>
+					<ul class="bullets">
+						<li>Las nanos requieren configuración mínima: Modo bridge.</li>
+						<li>Por 200 euros montamos un supernodo casero, por 300 euros
+							montamos un supernodo casero con amplia cobertura.</li>
+						<li>La gestión se realizaría toda desde RouterOS: Muy cómodo.</li>
+						<li>Fácilmente escalable: 5 puertos ethernet == 5 antenas.</li>
+						<li>Nada de bricolage.</li>
+					</ul>
+					<p>Desventajas:</p>
+					<ul class="bullets">
+						<li>Montaje no soportado por la web de guifi.net.</li>
+						<li>PERO: podemos simularlo fácilmente.</li>
+					</ul>
+				</section>
+			</div>
+
+			<div class="slide">
+				<section class="center intro">
+					<hgroup>
+						<h1>Montaje tipo 4:</h1>
+						<h2>Ubiquiti y enrutador libre</h2>
+						<p>Sistema operativo con DD-WRT u OpenWRT y el hardware
+							compatible que queramos</p>
+						<p class="jclock"></p>
+					</hgroup>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">Hardware</span>
+					<h1>Características</h1>
+				</header>
+				<section>
+					<p>Estas son las características de estos montajes:</p>
+					<ul class="bullets">
+						<li>El utilizar un SO libre nos independiza del HW y del
+							fabricante.</li>
+						<li>El desarrollo y evolución del SO se realiza por la
+							comunidad.</li>
+					</ul>
+					<p>Desventajas:</p>
+					<ul class="bullets">
+						<li>No tan robusto y funcional como RouterOS.</li>
+						<li>DD-WRT no es 100% libre. OpenWRT sí.</li>
+						<li>No soportado en la web de guifi.net, PERO podemos
+							simularlo.</li>
+					</ul>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">Enrutador libre</span>
+					<h1>DD-WRT</h1>
+				</header>
+				<section>
+					<p>
+						Avanza o retrocede por las fotos con las teclas: <span class="key">&uarr;</span>
+						y <span class="key">&darr;</span>
+					<div class="gallery" style="background: white;">
+						<p></p>
+						<img alt="Administración web DD-WRT"
+							src="images/ddwrt/ddwrt01.png"> <img
+							alt="Administración web DD-WRT" src="images/ddwrt/ddwrt02.png">
+						<img alt="Administración web DD-WRT"
+							src="images/ddwrt/ddwrt03.png"> <img
+							alt="Administración web DD-WRT" src="images/ddwrt/ddwrt04.png">
+						<img alt="Administración web DD-WRT"
+							src="images/ddwrt/ddwrt05.png"> <img
+							alt="Administración web DD-WRT" src="images/ddwrt/ddwrt06.png">
+					</div>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<span class="css">Enrutador libre</span>
+					<h1></h1>
+					Hardware
+				</header>
+				<section>
+					<p>
+						Avanza o retrocede por las fotos con las teclas: <span class="key">&uarr;</span>
+						y <span class="key">&darr;</span>
+					<div class="gallery" style="background: white;">
+						<p></p>
+						<img alt="Linksys WRT54G" src="images/ddwrt/hw/wrt54g.jpg">
+						<img alt="Asus WL500G" src="images/ddwrt/hw/asuswl500g.jpg">
+						<img alt="Linksys WRT610N. Doble radio 2,4Ghz/5Ghz"
+							src="images/ddwrt/hw/wrt610n.jpg"> <img
+							alt="Montaje mixto con un SO más libre" src="images/mixto2.png">
+					</div>
+				</section>
+			</div>
+
+			<div class="slide">
+				<header>
+					<h1>Enlaces de interés</h1>
+				</header>
+				<section>
+					<p>Algunos enlaces interesantes para ampliar información sobre
+						lo que hemos contado:</p>
+					<ul class="bullets">
+						<li><a
+							href="http://www.consumer.es/web/es/tecnologia/internet/2010/06/03/193249.php">Entrevista
+								a Ramon Roca en Consumer.es</a></li>
+						<li><a
+							href="http://castello.guifi.net/content/instrucciones-de-conexion-guifinet">Instrucciones
+								de conexión a Guifi.net (en castello.guifi.net)</a></li>
+						<li><a href="http://asociacionjuvenilelcueto.info/node/162">Configuración
+								de un nodo de usuario en la red Guifi.net</a>.</li>
+						<li><a href="http://guifi.net/connectar_a_guifi">Connectar
+								a guifi.net (en tres passos) [CA]</a></li>
+						<li><a href="http://www.ubnt.com/forum/">Foros de
+								usuarios de productos Ubiquity (Nanostation) [EN]</a></li>
+						<li><a href="http://forum.mikrotik.com/">Foros de
+								usuarios de productos Mikrotik [EN]</a></li>
+						<li><a href="http://routerboard.com/">routerboard.com:
+								tienda de productos Mikrotik</a></li>
+					</ul>
+				</section>
+			</div>
+
+
+		</div>
+		<!--[if IE]>
+        <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script> 
+        <script>CFInstall.check({ mode: "overlay" });</script> 
+    <![endif]-->
+		<script type="text/javascript"
+			src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+		<script
+			src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+		<script type="text/javascript" src="js/jquery.jclock-1.2.0.js"></script>
+		<script type="text/javascript" src="js/guifinet_wms.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/swfobject.js"></script>
+
+		<script type="text/javascript">
+
+        $('.jclock').jclock();
+
+        function updatevideos() {
+            $(".video").each(function() {
+            	var vid = document.getElementById($(this).attr("id"));
+            	vid.get(0).pauseVideo();
+            });
+       	}
+
+        var video = $("div.slide.current").children("section").children("object.video");
+        if (video.get(0)) {
+            video.get(0).playVideo();
+        }
+
+	var castello = new google.maps.LatLng(40.009472,-0.024033);
+	var map_options = {
+		zoom: 11,
+		center: castello,
+		mapTypeControl: false,
+      		mapTypeId: google.maps.MapTypeId.HYBRID
+	}
+	var map = new google.maps.Map(document.getElementById('map1'), map_options);
+	loadWMS(map);
+
+	legend = document.createElement('div');
+	legend.innerHTML='<div class="legend" style="background: white; padding: 5px; font-size: 14px;"><ul><li><img src="images/map/yellow.png" /> Enlaces funcionando</li><li><img src="images/map/green.png" /> Troncales entre supernodos</li><li><img src="images/map/blue.png" /> Enlaces en pruebas</li><li><img src="images/map/dot.png" /> Nodos de usuario</li><li><img src="images/map/star.png" /> Supernodos</li></ul></div>';
+	legend.index = 1;
+	map.controls[google.maps.ControlPosition.TOP_RIGHT].push(legend);
+
+    	var params = { allowScriptAccess: "always" };
+    	var atts = { class: "video" };
+	swfobject.embedSWF("http://www.youtube.com/v/vgmjeXRwe3w&enablejsapi=1&playerapiid=ytplayer", "video1", "840", "510", "8", null, null, params, atts)
+	swfobject.embedSWF("http://www.youtube.com/v/oRtfmJJq56U&enablejsapi=1&playerapiid=ytplayer", "video2", "640", "510", "8", null, null, params, atts)
+	swfobject.embedSWF("http://www.youtube.com/v/zyI1LvQ1-_M&enablejsapi=1&playerapiid=ytplayer", "video3", "840", "510", "8", null, null, params, atts)
+	swfobject.embedSWF("http://www.youtube.com/v/hDnWGEtY-eg&enablejsapi=1&playerapiid=ytplayer", "video4", "640", "510", "8", null, null, params, atts)
+	swfobject.embedSWF("http://www.youtube.com/v/kS60eIRH7gY&enablejsapi=1&playerapiid=ytplayer", "video5", "640", "510", "8", null, null, params, atts)
+
+	$("div.gallery").each(function() {
+		gallery=$(this);
+		gallery.children("img").first().addClass("active");
+		$(this).children("p").text($(this).children("img.active").attr("alt"));
+                imgs = gallery.children("img");
+                total = imgs.size();
+                active = imgs.index(gallery.children("img.active")) + 1;
+                gallery.children("p").text(gallery.children("img.active").attr("alt"));
+                gallery.children("p").append(" <span>" + active + "/" + total + "</span>");
+	});
+
+
+	$(document).keydown(function(e) {
+		var gallery = $("div.slide.current div.gallery");
+		switch (e.keyCode) {
+			case 38:
+				gallery.children("img.active").hide(0, function() {
+					var active = gallery.children("img.active");
+					var last = gallery.children("img").last();
+					if (active.attr("src") == last.attr("src")) {
+						var next = gallery.children("img").first();
+					} else {
+						var next = gallery.children("img.active").next("img");
+					}
+					next.fadeIn("fast");
+					active.removeClass("active");
+					next.addClass("active");
+				});
+				break;
+			case 40:
+				gallery.children("img.active").hide(0, function() {
+					var active = gallery.children("img.active");
+					var last = gallery.children("img").first();
+					if (active.attr("src") == last.attr("src")) {
+						var prev = gallery.children("img").last();
+					} else {
+						var prev = gallery.children("img.active").prev("img");
+					}
+					prev.fadeIn("fast");
+					active.removeClass("active");
+					prev.addClass("active");
+				});
+				break;
+			case 39:
+			case 37:
+				updatevideos();
+				break;
+		}
+		imgs = gallery.children("img");
+		total = imgs.size();
+		active = imgs.index(gallery.children("img.active")) + 1;
+		gallery.children("p").text(gallery.children("img.active").attr("alt"));
+		gallery.children("p").append(" <span>" + active + "/" + total + "</span>");
+	});
+
+    </script>
+</body>
+</html>
